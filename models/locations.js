@@ -10,14 +10,13 @@ const locationSchema = new mongoose.Schema({
 
   region: {
     type: String,
-    required: true,
-    unique: true,
+    required: true
   },
 
   properties: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Property",
+      ref: "Home",
     },
   ],
 });
