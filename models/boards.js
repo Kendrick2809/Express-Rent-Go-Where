@@ -20,12 +20,12 @@ const boardSchema = new mongoose.Schema({
 
   comments: {
     type: Schema.Types.ObjectId,
-    ref: "comment",
+    ref: "Comment",
   },
 
   replies: {
     type: Schema.Types.ObjectId,
-    ref: "reply",
+    ref: "Reply",
   },
 });
 

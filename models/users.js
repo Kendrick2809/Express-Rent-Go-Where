@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
   followedProperties: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Property",
+      ref: "Home",
     },
   ],
 
@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema({
   location: [
     {
       type: Schema.Types.ObjectId,
-      ref: "location",
+      ref: "Location",
     },
   ],
 
@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema({
 
   nationality: {
     type: Schema.Types.ObjectId,
-    ref: "nationality",
+    ref: "Nationality",
   },
 
   gender: {
