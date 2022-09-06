@@ -10,7 +10,7 @@ const boardSchema = new mongoose.Schema({
   Properties: [
     {
       type: Schema.Types.ObjectId,
-      ref: Property,
+      ref: Home,
     },
   ],
 
