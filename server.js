@@ -8,9 +8,10 @@ const req = require('express/lib/request')
 const app = express()
 const port = process.env.PORT || 8000
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+const apiRouter = require('./routers/routes')
+
+//Router
+app.use('/api/v1', apiRouter)
 
 //Server
 app.listen(port, async () => {
@@ -19,7 +20,7 @@ app.listen(port, async () => {
         await mongoose.connect(connectToMongo.uri, { useNewUrlParser: true, useUnifiedTopology: true } )
 
     } catch (err) {
-        console.log('Failed to connect to Mongo Atlas')
+        console.log('Failed to connect to Mongo Atlas. Error is: ', err)
         process.exit(1)
     }
 
