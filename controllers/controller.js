@@ -1,4 +1,5 @@
 const homeModel = require('../models/homes')
+const userModel = require('../models/users')
 
 module.exports = {
     homepage: (req, res) => {
@@ -23,6 +24,20 @@ module.exports = {
         }
 
         return res.json(properties)
+    }
+
+    , indexPotentialHousemates: async (req, res) => {
+        let potentialHosemates = []
+        
+        try {
+            potentialHosemates = await userModel.find({})
+        } catch (err) {
+            res.status(500)
+            return res.json({error: 'failed to return indexPotentialHousemates'})            
+            
+        }
+
+        return res.json(potentialHosemates)
     }
 
 }
