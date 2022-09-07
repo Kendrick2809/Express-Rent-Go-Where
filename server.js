@@ -17,7 +17,7 @@ app.use('/api/v1', apiRouter)
 app.listen(port, async () => {
 
     try {
-        await mongoose.connect(connectToMongo.uri, { useNewUrlParser: true, useUnifiedTopology: true } )
+        await mongoose.connect(connectToMongo.uri, { dbName: process.env.DB_NAME, useNewUrlParser: true, useUnifiedTopology: true } )
 
     } catch (err) {
         console.log('Failed to connect to Mongo Atlas. Error is: ', err)
