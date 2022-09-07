@@ -10,12 +10,14 @@ module.exports = {
         }
     },
 
-    call: (req, res) => {
+    indexProperties: async (req, res) => {
+        let properties = []
         try {
-            res.send('call')
+            properties = await 
         } catch (err) {
             res.status(500)
-            return res.json({error: 'failed to display call'})
+            return res.json({error: 'failed to return indexProperties'})            
+            
         }
     }
 

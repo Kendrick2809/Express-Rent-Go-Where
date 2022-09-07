@@ -3,8 +3,9 @@ const router = express.Router()
 
 const controller = require('../controllers/controller')
 
-//Routes
-router.get('/call', controller.call)
+//Routes from /api/v1
 router.get('/', controller.homepage)
+router.get('/app/show_properties', controller.indexProperties)
+router.get('/app/show_housemates', controller.indexHousemates)
 
 module.exports = router 
