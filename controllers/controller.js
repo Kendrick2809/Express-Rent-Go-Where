@@ -12,6 +12,7 @@ module.exports = {
 
     indexProperties: async (req, res) => {
         let properties = []
+        
         try {
             properties = await 
         } catch (err) {
