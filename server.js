@@ -19,6 +19,9 @@ app.use(
 
 //Router
 app.use("/api/v1", apiRouter);
+app.get("/", (req,res) => {
+  res.send("append /api/v1/...")
+})
 
 //Server
 app.listen(port, async () => {
