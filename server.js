@@ -10,7 +10,9 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const apiRouter = require("./routers/routes");
+const userRouter = require("./routers/userRoutes")
 
+app.use(express.urlencoded({extended: true}))
 app.use(
   cors({
     origin: "*",
@@ -19,6 +21,10 @@ app.use(
 
 //Router
 app.use("/api/v1", apiRouter);
+app.get("/", (req,res) => {
+  res.send("append /api/v1/...")
+})
+app.use("/api/v1/auth",userRouter);
 
 //Server
 app.listen(port, async () => {

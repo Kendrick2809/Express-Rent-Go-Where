@@ -1,4 +1,5 @@
 const express = require("express");
+const { useInRouterContext } = require("react-router-dom");
 const router = express.Router();
 
 const controller = require("../controllers/controller");
@@ -10,5 +11,7 @@ router.get(
   "/app/show_potentialHousemates",
   controller.indexPotentialHousemates
 );
+
+
 
 module.exports = router;
