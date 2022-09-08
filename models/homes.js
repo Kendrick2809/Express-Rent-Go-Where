@@ -54,7 +54,7 @@ const homeSchema = new mongoose.Schema({
   },
 
   images: {
-    type: String,
+    type: [],
   },
 });
 
