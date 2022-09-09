@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-//const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const userModel = require("../models/users");
 
 module.exports = {
@@ -64,6 +64,8 @@ module.exports = {
       process.env.JWT_SECRET
     );
 
+    console.log("issued token")
     return res.json({ token });
+   
   },
 };
