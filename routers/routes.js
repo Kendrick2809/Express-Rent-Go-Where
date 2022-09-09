@@ -12,6 +12,4 @@ router.get(
   controller.indexPotentialHousemates
 );
 
-
-
 module.exports = router;
