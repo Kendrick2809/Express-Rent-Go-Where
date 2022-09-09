@@ -17,17 +17,14 @@ const homeSchema = new mongoose.Schema({
 
   price: {
     type: String,
-    required: true,
   },
 
   bedrooms: {
     type: String,
-    required: true,
   },
 
   bathrooms: {
     type: String,
-    required: true,
   },
 
   pricePsf: {
@@ -40,7 +37,6 @@ const homeSchema = new mongoose.Schema({
 
   availability: {
     type: Boolean,
-    required: true,
   },
 
   originalPoster: {
@@ -50,11 +46,10 @@ const homeSchema = new mongoose.Schema({
 
   boards: {
     type: Array,
-    required: true,
   },
 
   images: {
-    type: String,
+    type: [],
   },
 });
 
