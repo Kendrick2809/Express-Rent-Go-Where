@@ -11,5 +11,6 @@ router.get(
   "/app/show_potentialHousemates",
   controller.indexPotentialHousemates
 );
+router.post('/login', controller.login)
 
 module.exports = router;
