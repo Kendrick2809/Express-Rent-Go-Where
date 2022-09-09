@@ -20,8 +20,9 @@ app.use(
 );
 
 //Router
-app.use("/api/v1", apiRouter);
 app.use("/api/v1/auth",userRouter);
+app.use("/api/v1", apiRouter);
+
 app.get("/", (req,res) => {
   res.send("append /api/v1/...")
 })
