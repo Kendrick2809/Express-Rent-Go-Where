@@ -6,47 +6,42 @@ const mongoose = require("mongoose");
 module.exports = {
   updateUser: async (req, res) => {
     // do validation...
-
-    let user = null;
-    // const filterUserEmail = { email: req.body.email };
-    // const updateNationality = { nationality: req.body.nationality };
-    // console.log("userEmail :", filterUserEmail);
-    // console.log("nationality :", updateNationality);
-
+    //if it fails when merging with react. its likely due to the need to decode jwt and get objectID out
+   let user = null
     try {
-      user = await userModel.findOneAndUpdate(
-        filterUserEmail,
-        {
-          $push: {
-            nationality: mongoose.Types.ObjectId(req.body.nationality),
-          },
-        },
-        { new: true }
-      );
+        // genderToUpadte = req.body.gender
+        user = await userModel.findByIdAndUpdate(
+          req.body.userId,
+          {
+            gender : req.body.gender,
+            followedUsers: req.body.followedUsers,
+            followedProperties: req.body.followedProperties,
+            nationality: req.body.nationality
+          }
+        );
 
-      console.log(user.email);
-      console.log(user.nationality);
-      console.log("email ok");
-
-      // await userModel.updateOne({ nationality: nationalityBody })
-      // await user.save()
     } catch (err) {
       res.status(500);
-      return res.json({ error: `Fail to get user of id ${filterUserEmail}` });
+      return res.json({ error: `Fail to get user of id ${req.body.userId}` });
     }
 
     if (!user) {
       res.status(404);
       return res.json(user);
     }
-
-    // try {
-    //     await user.updateOne({ : nationalityBody })
-    // } catch (err) {
-    //     res.status(500)
-    //     return res.json({error: "failed to update user"})
-    // }
-
     return res.json({});
   },
+
+  
 };
+//casting objectID string into objectid and pass into mongodb
+   // try {
+    //   user = await userModel.findByIdAndUpdate(
+    //     req.body.userId,
+    //     {
+    //       $push: {
+    //         nationality: mongoose.Types.ObjectId(req.body.nationality),
+    //       },
+    //     },
+    //     { new: true }
+    //   );
