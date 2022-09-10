@@ -12,7 +12,8 @@ const port = process.env.PORT || 8000;
 const apiRouter = require("./routers/routes");
 const userRouter = require("./routers/userRoutes")
 
-app.use(express.urlencoded({extended: true}))
+// app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.use(
   cors({
     origin: "*",

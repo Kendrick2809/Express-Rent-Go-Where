@@ -54,7 +54,8 @@ module.exports = {
     // generate JWT and return as response
     const userData = {
       email: user.email,
-      //   name: user.name,
+      // name: user.name,
+
     };
     const token = jwt.sign(
       {
