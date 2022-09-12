@@ -77,5 +77,24 @@ module.exports = {
       res.status(500);
       return res.json({ error: `Fail to get id ${req.params.userId}` });
     }
+  },
+
+  deleteSingleProperties : async (req, res) => {
+
+    try {
+      property = await homeModel.findById(req.params.propID);
+    } catch (err) {
+      res.status(500);
+      return res.json({ error: `Fail to get user of id ${req.params.propID}` });
+    }
+    try {
+      await property.delete();
+    } catch (err) {
+      console.log(err);
+      res.status(500).json({ error: "failed to delete property" });
+    }
+
+    return res.json();
   }
+
 };
