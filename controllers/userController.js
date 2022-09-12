@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
-const jwt = require('jsonwebtoken')
+const jwt = require("jsonwebtoken");
 const userModel = require("../models/users");
+const mongoose = require("mongoose");
 
 module.exports = {
   register: async (req, res) => {
@@ -54,7 +55,7 @@ module.exports = {
     // generate JWT and return as response
     const userData = {
       email: user.email,
-      //   name: user.name,
+      objId: user._id
     };
     const token = jwt.sign(
       {
@@ -64,8 +65,7 @@ module.exports = {
       process.env.JWT_SECRET
     );
 
-    console.log("issued token")
+    console.log("generated JWT, issuing token");
     return res.json({ token });
-   
-  },
+  }
 };
