@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 //routes
-const apiRouter = require("./routers/routes");
+const apiRouter = require("./routers/propertyRoutes");
 const userRouter = require("./routers/userRoutes")
 const profileRouter = require("./routers/profileRoutes")
 

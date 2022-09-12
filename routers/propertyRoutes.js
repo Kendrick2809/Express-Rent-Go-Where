@@ -2,7 +2,7 @@ const express = require("express");
 const { useInRouterContext } = require("react-router-dom");
 const router = express.Router();
 
-const controller = require("../controllers/controller");
+const controller = require("../controllers/propertyController");
 
 //Routes from /api/v1
 router.get("/", controller.homepage);
