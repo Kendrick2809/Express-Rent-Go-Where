@@ -29,6 +29,7 @@ module.exports = {
   },
 
   indexPotentialHousemates: async (req, res) => {
+    //potential soln: 
     let potentialHosemates = [];
 
     try {
@@ -54,7 +55,7 @@ module.exports = {
 
     return res.json(property);
   },
-  
+
   createProperties: async (req, res) => {
 
     try {
@@ -66,4 +67,15 @@ module.exports = {
     return res.status(201).json()
   },
 
+  editSingleProperties: async (req, res) => {
+    let property = null
+    try {
+
+      property = await homeModel.findByIdAndUpdate(req.params.propID, req.body)
+
+    } catch (err) {
+      res.status(500);
+      return res.json({ error: `Fail to get id ${req.params.userId}` });
+    }
+  }
 };
