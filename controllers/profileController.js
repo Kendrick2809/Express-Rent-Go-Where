@@ -11,7 +11,6 @@ module.exports = {
     try {
 
       user = await userModel.findById(req.body.userId).exec();
-      console.log('user details: ', user)
     } catch (err) {
 
       res.status(500);
@@ -19,10 +18,10 @@ module.exports = {
     }
 
     if (!user) {
-      res.status(404);
-      return res.json(user);
+      return res.status(404).json()
+
     }
-    return res.json({});
+    return res.json(user)
   },
 
   updateUser: async (req, res) => {
