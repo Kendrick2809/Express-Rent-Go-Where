@@ -4,9 +4,28 @@ const userModel = require("../models/users");
 const mongoose = require("mongoose");
 
 module.exports = {
+  displayUser: async (req, res) => {
+    // do validation...
+    
+    let user = null;
+    try {
+
+      user = await userModel.findById(req.body.userId).exec();
+    } catch (err) {
+
+      res.status(500);
+      return res.json({ error: `Fail to get user of id ${req.body.userId}` });
+    }
+
+    if (!user) {
+      return res.status(404).json()
+
+    }
+    return res.json(user)
+  },
+
   updateUser: async (req, res) => {
     // do validation...
-    //if it fails when merging with react. its likely due to the need to decode jwt and get objectID out
     
     let user = null;
     try {

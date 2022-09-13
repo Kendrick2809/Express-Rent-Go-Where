@@ -9,7 +9,9 @@ const req = require("express/lib/request");
 const app = express();
 const port = process.env.PORT || 8000;
 
-const apiRouter = require("./routers/routes");
+
+//routes
+const apiRouter = require("./routers/propertyRoutes");
 const userRouter = require("./routers/userRoutes")
 
 // app.use(express.urlencoded({extended: true}))
