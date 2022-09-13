@@ -9,10 +9,10 @@ const req = require("express/lib/request");
 const app = express();
 const port = process.env.PORT || 8000;
 
+
 //routes
 const apiRouter = require("./routers/propertyRoutes");
 const userRouter = require("./routers/userRoutes")
-const profileRouter = require("./routers/profileRoutes")
 
 // app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -24,7 +24,6 @@ app.use(
 
 //Router
 app.use("/api/v1/auth",userRouter);
-app.use("/api/v1/profile",profileRouter)
 app.use("/api/v1", apiRouter);
 
 app.get("/", (req,res) => {
