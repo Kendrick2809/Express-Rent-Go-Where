@@ -7,7 +7,7 @@ const homeSchema = new mongoose.Schema({
     required: true,
   },
 
-  room: {
+  rooms: {
     type: String,
   },
 
@@ -16,10 +16,6 @@ const homeSchema = new mongoose.Schema({
   },
 
   price: {
-    type: String,
-  },
-
-  bedrooms: {
     type: String,
   },
 
