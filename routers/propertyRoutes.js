@@ -8,15 +8,17 @@ const controller = require("../controllers/propertyController");
 router.get("/", controller.homepage);
 
 router.get("/app/show_properties", controller.indexProperties);
-router.get("/app/show_properties/:propID", controller.indexSingleProperties)
+router.get("/app/show_properties/:propID", controller.indexSingleProperties);
 router.post("/app/create_properties", controller.createProperties);
-router.patch("/app/edit_properties/:propID", controller.editSingleProperties)
-router.delete("/app/delete_properties/:propID", controller.deleteSingleProperties)
-
-router.get("/app/show_potentialHousemates", controller.indexPotentialHousemates);
-
-
-
-
+router.patch("/app/edit_properties/:propID", controller.editSingleProperties);
+router.delete(
+  "/app/delete_properties/:propID",
+  controller.deleteSingleProperties
+);
+router.get(
+  "/app/show_potentialHousemates",
+  controller.indexPotentialHousemates
+);
+router.post("/board/show_properties", controller.displayPropertyDashboard);
 
 module.exports = router;
