@@ -19,6 +19,10 @@ router.get(
   "/app/show_potentialHousemates",
   controller.indexPotentialHousemates
 );
-router.post("/board/show_properties", controller.displayPropertyDashboard);
+router.get(
+  "/board/show_properties/:userID",
+  controller.displayPropertyDashboard
+);
+router.post("/app/filter_properties", controller.filterProperties);
 
 module.exports = router;

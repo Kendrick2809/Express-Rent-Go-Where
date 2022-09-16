@@ -97,8 +97,13 @@ module.exports = {
     // do validation...
 
     let user = null;
+
+    let ID = req.params.userID;
+
+    console.log(ID);
+
     try {
-      user = await userModel.findById(req.body.userId).exec();
+      user = await userModel.findById(ID).exec();
     } catch (err) {
       res.status(500);
       return res.json({ error: `Fail to get user of id ${req.body.userId}` });
@@ -108,5 +113,21 @@ module.exports = {
       return res.status(404).json();
     }
     return res.json(user);
+  },
+
+  filterProperties: async (req, res) => {
+    let properties = [];
+
+    try {
+      properties = await homeModel.find({
+        _id: { $in: req.body.propertyID },
+      });
+      // console.log(properties)
+    } catch (err) {
+      res.status(500);
+      return res.json({ error: "failed to filter properties" });
+    }
+
+    return res.json(properties);
   },
 };
