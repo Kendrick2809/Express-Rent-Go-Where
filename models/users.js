@@ -46,10 +46,12 @@ const userSchema = new mongoose.Schema({
     type: String,
   },
 
-  nationality: [{
-    type: Schema.Types.ObjectId,
-    ref: "Nationality",
-  }],
+  nationality: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Nationality",
+    },
+  ],
 
   gender: {
     type: String,

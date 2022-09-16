@@ -1,8 +1,8 @@
 const homeModel = require("../models/homes");
 const userModel = require("../models/users");
 
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 module.exports = {
   homepage: (req, res) => {
@@ -29,7 +29,7 @@ module.exports = {
   },
 
   indexPotentialHousemates: async (req, res) => {
-    //potential soln: 
+    //potential soln:
     let potentialHosemates = [];
 
     try {
@@ -57,30 +57,26 @@ module.exports = {
   },
 
   createProperties: async (req, res) => {
-
     try {
       await homeModel.create(req.body);
     } catch (err) {
       res.status(500);
       return res.json({ error: "failed to create a single property" });
     }
-    return res.status(201).json()
+    return res.status(201).json();
   },
 
   editSingleProperties: async (req, res) => {
-    let property = null
+    let property = null;
     try {
-
-      property = await homeModel.findByIdAndUpdate(req.params.propID, req.body)
-
+      property = await homeModel.findByIdAndUpdate(req.params.propID, req.body);
     } catch (err) {
       res.status(500);
       return res.json({ error: `Fail to get id ${req.params.userId}` });
     }
   },
 
-  deleteSingleProperties : async (req, res) => {
-
+  deleteSingleProperties: async (req, res) => {
     try {
       property = await homeModel.findById(req.params.propID);
     } catch (err) {
@@ -95,6 +91,5 @@ module.exports = {
     }
 
     return res.json();
-  }
-
+  },
 };
