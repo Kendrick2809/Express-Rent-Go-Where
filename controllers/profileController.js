@@ -56,7 +56,7 @@ module.exports = {
     const userId = req.params.id
     console.log("userId typeof is: ", typeof(userId))
     const mongooseUserId = new mongoose.Types.ObjectId(userId)
-    let user = null;
+    // let user = null;
 
     // try {
     //   // user = await userModel.findById(userId);
