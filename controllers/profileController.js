@@ -6,39 +6,35 @@ const mongoose = require("mongoose");
 module.exports = {
   displayUser: async (req, res) => {
     // do validation...
-    
+
     let user = null;
     try {
-
       user = await userModel.findById(req.body.userId).exec();
     } catch (err) {
-
       res.status(500);
       return res.json({ error: `Fail to get user of id ${req.body.userId}` });
     }
 
     if (!user) {
-      return res.status(404).json()
-
+      return res.status(404).json();
     }
-    return res.json(user)
+    return res.json(user);
   },
 
   updateUser: async (req, res) => {
     // do validation...
-    
+
     let user = null;
     try {
+      const propertyID = req.body.followedProperties;
 
       user = await userModel.findByIdAndUpdate(req.body.userId, {
         gender: req.body.gender,
         followedUsers: req.body.followedUsers,
-        followedProperties: req.body.followedProperties,
+        $push: { followedProperties: propertyID },
         nationality: req.body.nationality,
       });
-
     } catch (err) {
-
       res.status(500);
       return res.json({ error: `Fail to get user of id ${req.body.userId}` });
     }
