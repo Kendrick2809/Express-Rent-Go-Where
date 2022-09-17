@@ -51,27 +51,38 @@ module.exports = {
 
   deleteUser: async (req, res) => {
     // do validation...
+    console.log("req is: ", req)
 
-    const userId = req.body.userId;
+    const userId = req.params.id
+    console.log("userId typeof is: ", typeof(userId))
+    const mongooseUserId = new mongoose.Types.ObjectId(userId)
     let user = null;
 
-    try {
-      user = await userModel.findById(userId);
-    } catch (err) {
-      res.status(500);
-      return res.json({ error: `Fail to get user of id ${userId}` });
-    }
+    // try {
+    //   // user = await userModel.findById(userId);
+    //   user = await userModel.findById(mongooseUserId)
+    //   console.log("user is: ", user)
+    // } catch (err) {
+    //   res.status(500);
+    //   return res.json({ error: `Fail to get user of id ${userId}` });
+    // }
 
-    if (!user) {
-      res.status(404);
-      return res.json(user);
-    }
+    // if (!user) {
+    //   res.status(404);
+    //   return res.json(user);
+    // }
+
+    // try {
+    //   await user.delete();
+    // } catch (err) {
+    //   console.log(err);
+    //   res.status(500).json({ error: "failed to delete user" });
+    // }
 
     try {
-      await user.delete();
+      await userModel.findByIdAndDelete(userId)
     } catch (err) {
-      console.log(err);
-      res.status(500).json({ error: "failed to delete user" });
+      console.log(err)
     }
 
     return res.json();
