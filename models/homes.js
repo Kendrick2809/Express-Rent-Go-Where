@@ -36,8 +36,7 @@ const homeSchema = new mongoose.Schema({
   },
 
   originalPoster: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
+    type: String,
   },
 
   boards: {

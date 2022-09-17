@@ -8,8 +8,11 @@ module.exports = {
     // do validation...
 
     let user = null;
+    let ID = req.params.id;
+    console.log(ID);
+
     try {
-      user = await userModel.findById(req.body.userId).exec();
+      user = await userModel.findById(ID).exec();
     } catch (err) {
       res.status(500);
       return res.json({ error: `Fail to get user of id ${req.body.userId}` });
