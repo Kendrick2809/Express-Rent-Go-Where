@@ -26,5 +26,6 @@ router.get(
   controller.displayPropertyDashboard
 );
 router.post("/app/filter_properties", controller.filterProperties);
+router.post("/app/filter_propertiesByUser", controller.filterPropertiesByUser);
 
 module.exports = router;
