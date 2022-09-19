@@ -14,6 +14,24 @@ const apiRouter = require("./routers/propertyRoutes");
 const userRouter = require("./routers/userRoutes");
 const profileRouter = require("./routers/profileRoutes");
 
+const ImageKit = require("imagekit");
+
+const imagekit = new ImageKit({
+  urlEndpoint: "https://ik.imagekit.io/vsoncvhkm/",
+  publicKey: "public_VW2hCnJrSlQCWKZA9Xk7NnP3oxo=",
+  privateKey: "private_bDqpg31xQjydauujNuvSkGx9TE8=",
+});
+
+// allow cross-origin requests
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 // app.use(express.urlencoded({extended: true}))
 app.use(express.json());
 app.use(
@@ -21,6 +39,11 @@ app.use(
     origin: "*",
   })
 );
+
+app.get("/auth", function (req, res) {
+  var result = imagekit.getAuthenticationParameters();
+  res.send(result);
+});
 
 //Router
 app.use("/api/v1/auth", userRouter);
