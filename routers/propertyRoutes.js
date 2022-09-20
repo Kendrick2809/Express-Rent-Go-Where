@@ -1,4 +1,6 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
 const { useInRouterContext } = require("react-router-dom");
 const router = express.Router();
 
@@ -24,5 +26,6 @@ router.get(
   controller.displayPropertyDashboard
 );
 router.post("/app/filter_properties", controller.filterProperties);
+router.post("/app/filter_propertiesByUser", controller.filterPropertiesByUser);
 
 module.exports = router;

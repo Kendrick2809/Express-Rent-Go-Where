@@ -130,4 +130,20 @@ module.exports = {
 
     return res.json(properties);
   },
+
+  filterPropertiesByUser: async (req, res) => {
+    let properties = [];
+
+    try {
+      properties = await homeModel.find({
+        originalPoster: req.body.originalPoster,
+      });
+      // console.log(properties)
+    } catch (err) {
+      res.status(500);
+      return res.json({ error: "failed to filter properties" });
+    }
+
+    return res.json(properties);
+  },
 };

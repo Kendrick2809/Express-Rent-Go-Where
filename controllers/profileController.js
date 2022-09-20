@@ -51,6 +51,28 @@ module.exports = {
     return res.json({});
   },
 
+  deleteFromDashboard: async (req, res) => {
+    // do validation...
+
+    let user = null;
+    try {
+      const propertyID = req.body.followedProperties;
+
+      user = await userModel.findByIdAndUpdate(req.body.userId, {
+        $pop: { followedProperties: 1 },
+      });
+    } catch (err) {
+      res.status(500);
+      return res.json({ error: `Fail to get user of id ${req.body.userId}` });
+    }
+
+    if (!user) {
+      res.status(404);
+      return res.json(user);
+    }
+    return res.json({});
+  },
+
   deleteUser: async (req, res) => {
     // do validation...
     console.log("req is: ", req)
