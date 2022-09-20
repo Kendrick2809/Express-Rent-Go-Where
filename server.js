@@ -48,6 +48,7 @@ app.get("/auth", function (req, res) {
 //Router
 app.use("/api/v1/auth", userRouter);
 app.use("/api/v1/profile", profileRouter);
+
 app.use("/api/v1", apiRouter);
 
 app.get("/", (req, res) => {
