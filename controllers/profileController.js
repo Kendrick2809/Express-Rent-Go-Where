@@ -33,6 +33,8 @@ module.exports = {
 
       user = await userModel.findByIdAndUpdate(req.body.userId, {
         gender: req.body.gender,
+        name: req.body.name,
+        ethinicity: req.body.ethinicity,
         followedUsers: req.body.followedUsers,
         $push: { followedProperties: propertyID },
         nationality: req.body.nationality,
