@@ -19,6 +19,10 @@ const homeSchema = new mongoose.Schema({
     type: String,
   },
 
+  bedrooms: {
+    type: String,
+  },
+
   bathrooms: {
     type: String,
   },
@@ -44,6 +48,10 @@ const homeSchema = new mongoose.Schema({
   },
 
   images: {
+    type: [],
+  },
+
+  imagePath: {
     type: [],
   },
 });
