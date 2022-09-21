@@ -25,7 +25,7 @@ const homeData = [
     year: "2016 · Freehold",
     price: "$20,000/mo",
     bathrooms: "6 Baths",
-    sqf_list: "5,000 sqft / 464.51 sqm",
+    propSqf: "5,000 sqft / 464.51 sqm",
     originalPoster: "jgoerzen@gmail.com",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/20657240/UPHO.87905811.V800/Miro-Newton-Novena-Singapore.jpg",
@@ -41,7 +41,7 @@ const homeData = [
     year: "2017 · Freehold",
     price: "$9,500/mo",
     bathrooms: "3 Baths",
-    sqf_list: "1,808 sqft / 167.97 sqm",
+    propSqf: "1,808 sqft / 167.97 sqm",
     originalPoster: "dkeeler@verizon.net",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/23345533/UPHO.126821968.V800/Lloyd-SixtyFive-Orchard-River-Valley-Singapore.jpg",
@@ -57,7 +57,7 @@ const homeData = [
     year: "2000 · Freehold",
     price: "$4,250/mo",
     bathrooms: "2 Baths",
-    sqf_list: "990 sqft / 91.97 sqm",
+    propSqf: "990 sqft / 91.97 sqm",
     originalPoster: "ilial@att.net",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/23234801/UPHO.137208595.V800/Vertis-East-Coast-Marine-Parade-Singapore.jpg",
@@ -73,7 +73,7 @@ const homeData = [
     year: "2016 · 99 years",
     price: "$4,500/mo",
     bathrooms: "2 Baths",
-    sqf_list: "990 sqft / 91.97 sqm",
+    propSqf: "990 sqft / 91.97 sqm",
     originalPoster: "mrdvt@hotmail.com",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/17559712/UPHO.107341103.V800/Ardmore-Residence-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -89,7 +89,7 @@ const homeData = [
     year: "2002 · 99 years",
     price: "$6,500/mo",
     bathrooms: "2 Baths",
-    sqf_list: "1,152 sqft / 107.02 sqm",
+    propSqf: "1,152 sqft / 107.02 sqm",
     originalPoster: "noneme@att.net",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/24124536/UPHO.137052747.V800/The-Sail-Marina-Bay-Boat-Quay-Raffles-Place-Marina-Singapore.jpg",
@@ -105,7 +105,7 @@ const homeData = [
     year: "Freehold",
     price: "$12,800/mo",
     bathrooms: "5 Baths",
-    sqf_list: "2,411 sqft / 223.99 sqm",
+    propSqf: "2,411 sqft / 223.99 sqm",
     originalPoster: "jimxugle@comcast.net",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/23569186/UPHO.129733364.V800/Leedon-Green-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -121,7 +121,7 @@ const homeData = [
     year: "Freehold",
     price: "$5,500/mo",
     bathrooms: "2 Baths",
-    sqf_list: "1,400 sqft / 130.06 sqm",
+    propSqf: "1,400 sqft / 130.06 sqm",
     originalPoster: "khris@hotmail.com",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/24048345/UPHO.135926631.V800/Bellewaters-Hougang-Punggol-Sengkang-Singapore.jpg",
@@ -137,7 +137,7 @@ const homeData = [
     year: "2010 · Freehold",
     price: "$5,500/mo",
     bathrooms: "1 Bath",
-    sqf_list: "624 sqft / 57.97 sqm",
+    propSqf: "624 sqft / 57.97 sqm",
     originalPoster: "luvirini@mac.com",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/24116693/UPHO.136792305.V800/Hyll-on-Holland-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -154,7 +154,7 @@ const homeData = [
     year: "1980 · Freehold",
     price: "$14,000/mo",
     bathrooms: "4 Baths",
-    sqf_list: "2,928 sqft / 272.02 sqm",
+    propSqf: "2,928 sqft / 272.02 sqm",
     originalPoster: "jimmichie@verizon.net",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/23570764/UPHO.129753795.V800/Wilshire-Residences-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -171,7 +171,7 @@ const homeData = [
     year: "1998 · Freehold",
     price: "$4,300/mo",
     bathrooms: "2 Baths",
-    sqf_list: "1,356 sqft / 125.98 sqm",
+    propSqf: "1,356 sqft / 125.98 sqm",
     originalPoster: "guialbu@yahoo.com",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/24091217/UPHO.136459121.V800/The-Brownstone-Sembawang-Yishun-Singapore.jpg",
@@ -189,7 +189,7 @@ const homeData = [
     year: "2018 · 99 years",
     price: "$5,000/mo",
     bathrooms: "2 Baths",
-    sqf_list: "732 sqft / 68 sqm",
+    propSqf: "732 sqft / 68 sqm",
     originalPoster: "aegreene@att.net",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/23958306/UPHO.134768203.V800/Costa-Rhu-East-Coast-Marine-Parade-Singapore.jpg",
@@ -206,7 +206,7 @@ const homeData = [
     year: "2014 · Freehold",
     price: "$3,800/mo",
     bathrooms: "1 Bath",
-    sqf_list: "463 sqft / 43.01 sqm",
+    propSqf: "463 sqft / 43.01 sqm",
     originalPoster: "amanda@gmail.net",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/24147118/UPHO.137195024.V800/Juniper-Hill-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -223,7 +223,7 @@ const homeData = [
     year: "2022 · Freehold",
     price: "$4,200/mo",
     bathrooms: "1 Bath",
-    sqf_list: "484 sqft / 44.97 sqm",
+    propSqf: "484 sqft / 44.97 sqm",
     originalPoster: "psichel@msn.com",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/24076564/UPHO.136742993.V800/Twin-Waterfalls-Hougang-Punggol-Sengkang-Singapore.jpg",
@@ -240,7 +240,7 @@ const homeData = [
     year: "2009 · Freehold",
     price: "$5,800/mo",
     bathrooms: "3 Baths",
-    sqf_list: "1,130 sqft / 104.98 sqm",
+    propSqf: "1,130 sqft / 104.98 sqm",
     originalPoster: "lbecchi@verizon.net",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/24046076/UPHO.135897142.V800/Bartley-Vue-Hougang-Punggol-Sengkang-Singapore.jpg",
@@ -257,7 +257,7 @@ const homeData = [
     year: "99 years",
     price: "$6,000/mo",
     bathrooms: "3 Baths",
-    sqf_list: "1,593 sqft / 147.99 sqm",
+    propSqf: "1,593 sqft / 147.99 sqm",
     originalPoster: "akoblin@yahoo.com",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/23602508/UPHO.130174319.V800/Goodwood-Residence-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -274,7 +274,7 @@ const homeData = [
     year: "Freehold",
     price: "$7,500/mo",
     bathrooms: "4 Baths",
-    sqf_list: "1,625 sqft / 150.97 sqm",
+    propSqf: "1,625 sqft / 150.97 sqm",
     originalPoster: "akoblin@yahoo.com",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/24060288/UPHO.136090630.V800/Bellewaters-Hougang-Punggol-Sengkang-Singapore.jpg",
@@ -291,7 +291,7 @@ const homeData = [
     year: "2014 · Freehold",
     price: "$3,300/mo",
     bathrooms: "1 Bath",
-    sqf_list: "474 sqft / 44.04 sqm",
+    propSqf: "474 sqft / 44.04 sqm",
     originalPoster: "emmanuel@me.com",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/23644270/UPHO.130718877.V800/The-Reef-at-King%E2%80%99s-Dock-Harbourfront-Telok-Blangah-Singapore.jpg",
@@ -308,7 +308,7 @@ const homeData = [
     year: "",
     price: "$2,999/mo",
     bathrooms: "1 Bath",
-    sqf_list: "1,400 sqft / 130.06 sqm",
+    propSqf: "1,400 sqft / 130.06 sqm",
     originalPoster: "wsnyder@msn.com",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/24097321/UPHO.136539586.V800/Cape-Royale-Harbourfront-Telok-Blangah-Singapore.jpg",
@@ -325,7 +325,7 @@ const homeData = [
     year: "Freehold",
     price: "$4,200/mo",
     bathrooms: "2 Baths",
-    sqf_list: "1,066 sqft / 99.03 sqm",
+    propSqf: "1,066 sqft / 99.03 sqm",
     originalPoster: "wikinerd@mac.com",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/23569186/UPHO.129733364.V800/Leedon-Green-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -341,7 +341,7 @@ const homeData = [
     year: "99 years",
     price: "$9,000/mo",
     bathrooms: "3 Baths",
-    sqf_list: "3,200 sqft / 297.29 sqm",
+    propSqf: "3,200 sqft / 297.29 sqm",
     originalPoster: "seano@hotmail.com",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/23569208/UPHO.130151901.V800/Leedon-Green-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -358,7 +358,7 @@ const homeData = [
     year: "2009 · Freehold",
     price: "$4,500/mo",
     bathrooms: "1 Bath",
-    sqf_list: "517 sqft / 48.03 sqm",
+    propSqf: "517 sqft / 48.03 sqm",
     originalPoster: "dawnsong@comcast.net",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/24153881/UPHO.137286434.V800/Perfect-Ten-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -375,7 +375,7 @@ const homeData = [
     year: "2013 · Freehold",
     price: "$3,400/mo",
     bathrooms: "1 Bath",
-    sqf_list: "355 sqft / 32.98 sqm",
+    propSqf: "355 sqft / 32.98 sqm",
     originalPoster: "dawnsong@comcast.net",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/24097321/UPHO.136539586.V800/Cape-Royale-Harbourfront-Telok-Blangah-Singapore.jpg",
@@ -392,7 +392,7 @@ const homeData = [
     year: "2000 · 99 years",
     price: "$7,777/mo",
     bathrooms: "3 Baths",
-    sqf_list: "1,313 sqft / 121.98 sqm",
+    propSqf: "1,313 sqft / 121.98 sqm",
     originalPoster: "fraterk@yahoo.com",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/24048345/UPHO.135926631.V800/Bellewaters-Hougang-Punggol-Sengkang-Singapore.jpg",
@@ -409,7 +409,7 @@ const homeData = [
     year: "1998 · 999 years",
     price: "$4,600/mo",
     bathrooms: "3 Baths",
-    sqf_list: "1,109 sqft / 103.03 sqm",
+    propSqf: "1,109 sqft / 103.03 sqm",
     originalPoster: "skippy@gmail.com",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/24078632/UPHO.136304624.V800/The-Panorama-Ang-Mo-Kio-Bishan-Thomson-Singapore.jpg",
@@ -426,7 +426,7 @@ const homeData = [
     year: "2008 · 99 years",
     price: "$15,800/mo",
     bathrooms: "4 Baths",
-    sqf_list: "2,200 sqft / 204.39 sqm",
+    propSqf: "2,200 sqft / 204.39 sqm",
     originalPoster: "tskirvin@yahoo.ca",
     images: [
       "https://sg2-cdn.pgimgs.com/listing/23859495/UPHO.133500013.V800/Peak-Residence-Newton-Novena-Singapore.jpg",
@@ -443,7 +443,7 @@ const homeData = [
     year: "2007 · 99 years",
     price: "$5,800/mo",
     bathrooms: "2 Baths",
-    sqf_list: "883 sqft / 82.03 sqm",
+    propSqf: "883 sqft / 82.03 sqm",
     originalPoster: "bdthomas@optonline.net",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/23309686/UPHO.126400827.V800/The-Hyde-Tanglin-Holland-Bukit-Timah-Singapore.jpg",
@@ -460,7 +460,7 @@ const homeData = [
     year: "2016 · Freehold",
     price: "$4,600/mo",
     bathrooms: "1 Bath",
-    sqf_list: "1,130 sqft / 104.98 sqm",
+    propSqf: "1,130 sqft / 104.98 sqm",
     originalPoster: "jlbaumga@sbcglobal.net",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/24110791/UPHO.136708145.V800/Sky-Eden-Bedok-Bedok-Upper-East-Coast-Singapore.jpg",
@@ -477,7 +477,7 @@ const homeData = [
     year: "2015 · Freehold",
     price: "$5,200/mo",
     bathrooms: "2 Baths",
-    sqf_list: "829 sqft / 77.02 sqm",
+    propSqf: "829 sqft / 77.02 sqm",
     originalPoster: "rupak@yahoo.ca",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/24001158/UPHO.135335322.V800/Sky-Habitat-Ang-Mo-Kio-Bishan-Thomson-Singapore.jpg",
@@ -494,7 +494,7 @@ const homeData = [
     year: "2017 · 99 years",
     price: "$7,000/mo",
     bathrooms: "2 Baths",
-    sqf_list: "1,152 sqft / 107.02 sqm",
+    propSqf: "1,152 sqft / 107.02 sqm",
     originalPoster: "bigmauler@icloud.com",
     images: [
       "https://sg-rpfs.pgimgs.com/listing/24144526/UPHO.137157815.V800/Kovan-Residences-Hougang-Punggol-Sengkang-Singapore.jpg",
@@ -511,7 +511,7 @@ const homeData = [
     year: "2013 · Freehold",
     price: "$37,000/mo",
     bathrooms: "4 Baths",
-    sqf_list: "3,186 sqft / 295.99 sqm",
+    propSqf: "3,186 sqft / 295.99 sqm",
     originalPoster: "tbeck@gmail.com",
     images: [
       "https://sg1-cdn.pgimgs.com/listing/23889805/UPHO.133879311.V800/The-Hyde-Tanglin-Holland-Bukit-Timah-Singapore.jpg",

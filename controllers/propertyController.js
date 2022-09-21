@@ -69,11 +69,20 @@ module.exports = {
   editSingleProperties: async (req, res) => {
     let property = null;
     try {
+      console.log(req.body);
+      console.log(req.params.propID);
       property = await homeModel.findByIdAndUpdate(req.params.propID, req.body);
     } catch (err) {
       res.status(500);
       return res.json({ error: `Fail to get id ${req.params.userId}` });
     }
+
+    if (!property) {
+      res.status(404);
+      return res.json(property);
+    }
+
+    return res.json({});
   },
 
   deleteSingleProperties: async (req, res) => {
